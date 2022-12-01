@@ -1,5 +1,4 @@
 use std::io::{BufRead, BufReader, Read};
-use std::ops::Add;
 
 #[derive(Debug)]
 pub struct Elf {
