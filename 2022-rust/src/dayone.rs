@@ -8,12 +8,7 @@ pub struct Elf {
 
 impl Elf {
     pub fn count_calories(&self) -> usize {
-        let mut count: usize = 0;
-        for cal in self.calories.iter() {
-            count = count.add(cal)
-        }
-
-        return count
+        return self.calories.iter().sum();
     }
 }
 
