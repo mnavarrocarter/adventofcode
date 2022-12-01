@@ -1,7 +1,7 @@
-package one_test
+package two_test
 
 import (
-	"adventofcode/one"
+	"adventofcode/two"
 	"io"
 	"os"
 	"testing"
@@ -9,37 +9,37 @@ import (
 
 func Test_ItSolvesPartOne(t *testing.T) {
 	input := mustOpen("input.txt")
-	want := 1676
+	want := 2036120
 
 	defer func(c io.Closer) {
 		_ = c.Close()
 	}(input)
 
-	got, err := one.CountDepthIncrease(input)
+	got, err := two.CalculatePositionAndDepth(input)
 	if err != nil {
 		t.Fatalf("%v", err)
 	}
 
 	if want != got {
-		t.Fatalf("normal increment %d is not the same as expected %d", got, want)
+		t.Fatalf("got %d but wanted %d", got, want)
 	}
 }
 
 func Test_ItSolvesPartTwo(t *testing.T) {
 	input := mustOpen("input.txt")
-	want := 1706
+	want := 2015547716
 
 	defer func(c io.Closer) {
 		_ = c.Close()
 	}(input)
 
-	got, err := one.CountDepthIncreaseSlidingWindow(input)
+	got, err := two.CalculateAdvancedPositionAndDepth(input)
 	if err != nil {
 		t.Fatalf("%v", err)
 	}
 
-	if got != want {
-		t.Fatalf("normal increment %d is not the same as expected %d", got, want)
+	if want != got {
+		t.Fatalf("got %d but wanted %d", got, want)
 	}
 }
 
