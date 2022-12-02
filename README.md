@@ -8,6 +8,6 @@ Current years and languages so far:
 | Year | Language | Completed         |
 | ---- | -------- | ----------------- |
 | 2021 | Golang   | [02](2021-golang) |
-| 2022 | Rust     | [01](2022-rust)   |
+| 2022 | Rust     | [02](2022-rust)   |
 
 
