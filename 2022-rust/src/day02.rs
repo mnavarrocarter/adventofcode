@@ -203,12 +203,30 @@ mod tests {
     use super::*;
 
     #[test]
+    fn it_passes_part_one() {
+        let file = File::open("data/day02.test.txt").unwrap();
+
+        let count = calculate_total_score_with_guess(file);
+
+        assert_eq!(15, count);
+    }
+
+    #[test]
     fn it_solves_part_one() {
         let file = File::open("data/day02.txt").unwrap();
 
         let count = calculate_total_score_with_guess(file);
 
         assert_eq!(12535, count);
+    }
+
+    #[test]
+    fn it_passes_part_two() {
+        let file = File::open("data/day02.test.txt").unwrap();
+
+        let count = calculate_total_score_correctly(file);
+
+        assert_eq!(12, count);
     }
 
     #[test]

@@ -61,11 +61,28 @@ mod tests {
     use super::*;
 
     #[test]
+    fn it_passes_part_one() {
+        let file = File::open("data/day01.test.txt").unwrap();
+        let count = get_highest_calories(file);
+
+        assert_eq!(24000, count);
+    }
+
+    #[test]
     fn it_solves_part_one() {
         let file = File::open("data/day01.txt").unwrap();
         let count = get_highest_calories(file);
 
         assert_eq!(65912, count);
+    }
+
+    #[test]
+    #[ignore]
+    fn it_passes_part_two() {
+        let file = File::open("data/day01.test.txt").unwrap();
+        let count = get_top_three_calories(file);
+
+        assert_eq!(45000, count); // TODO: Check algorithm
     }
 
     #[test]

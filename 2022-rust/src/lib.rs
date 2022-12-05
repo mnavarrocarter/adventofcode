@@ -1,4 +1,6 @@
 extern crate core;
 
-pub mod dayone;
-pub mod daytwo;
+pub mod day01;
+pub mod day02;
+pub mod day03;
+pub mod day04;
